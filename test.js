@@ -7,5 +7,5 @@ const poerosn = {
 var arr = []
 for (const key in poerosn) {
     console.log(`${poerosn[key]}`);
-    asdjh
+    asdjhasda
 }
