@@ -1,0 +1,10 @@
+button {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid royalblue;
+    background: rosybrown;
+    border-radius: 188px;
+    padding: 50px 100px;
+    font-size: 50px;
+}
