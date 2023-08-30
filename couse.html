@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">   
+
+    <title>Courses</title>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-Dar " data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Courses</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#">Features</a>
+                  <a class="nav-link" href="#">Pricing</a>
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <main>
+		<div class="container mt-5">
+			<div class="input-group mb-3 ">
+				<input type="text" class="form-control" placeholder="Chapter Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+				<button class="btn btn-outline-secondary btn-outline-success" type="button" id="button-addon2">Add</button>
+			</div>
+			<ul class="list-group" id="parantList">
+				<li class="list-group-item d-flex justify-content-between">
+					<h4 class="flex-grow-1">Chapter 1</h4>
+					<button class="btn btn-warning mx-3">Edit</button>
+					<button class="btn btn-danger">Remove</button>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<script>
+		let addbtn = document.getElementById('button-addon2');
+		addbtn.addEventListener('click', fin1);
+		function fin1(e){
+			let currbtn = e.currentTarget;
+			let currinpt = currbtn.previousElementSibling;
+			let currchapname = currinpt.value;
+
+			let newli = document.createElement('li');
+			// newli.classList.add('list-group-item');
+			newli.className = "list-group-item d-flex justify-content-between"
+			newli.innerHTML = `<h4 class="flex-grow-1">Chapter 1</h4>
+					<button class="btn btn-warning mx-3">Edit</button>
+					<button class="btn btn-danger">Remove</button>`
+			let parantList = document.getElementById("parantList");
+			parantList.appendChild(newli);
+		}
+	</script>
+</body>
+</html>

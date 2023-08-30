@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Bulb</title>
+</head>
+<body style="background-color: black;">
+    <center>
+        <img id="bulb" src="img/download.jpeg" alt="">
+        <br>
+        <button id="toggle" style="padding: 20px;margin: 10px;">Turn on</button>
+    </center>
+    <script>
+        let btnid = document.getElementById('toggle');
+        let imgid = document.getElementById('bulb');
+        btnid.addEventListener("click", Switch);
+        function Switch() {
+            if (btnid.textContent == "Turn on") {
+                imgid.src = "img/48123160-bright-glowing-incandescent-light-bulb-on-a-white-background.jpg"
+                btnid.textContent = "Turn off"
+            }
+            else {
+                imgid.src = "img/download.jpeg"
+                
+                btnid.textContent = "Turn on"
+            }
+        }
+    </script>
+</body>
+</html>

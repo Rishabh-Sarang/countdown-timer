@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <ul id="element">
+        <li>First element</li>
+        <li>Second element</li>
+        <li>Third element</li>
+    </ul>
+    
+    <table>
+        <tr>
+            <td>one</td>
+            <td>two</td>
+            <td>three</td>
+        </tr>
+        <tr>
+            <td>four</td>
+            <td>five</td>
+            <td>six</td>
+        </tr>
+    </table>
+
+    <div>
+        fist div
+    </div>
+    
+    <script>
+        let a = document.body.children
+        const arr = Array.from(document.body.children)
+        const ttt = document.body.children[1];
+        const check = ttt.tBodies[0].rows[0].cells[1].textContent
+        element.style.background = "yellow"
+        const ultag = document.getElementById("element")
+        const queryS = document.querySelectorAll('ul > li:last-child')
+        console.log(queryS[0].textContent)
+        
+    </script>
+</body>
+</html>
